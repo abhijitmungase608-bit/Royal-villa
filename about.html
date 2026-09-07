@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | ROYAL VILLA | Rediscover Your Family Holidays</title>
+  <meta name="description"
+    content="Learn more about Royal Villa's mission to deliver handpicked, exclusive private pool villas with personal chefs and five-star hospitality near Mumbai.">
+  <meta name="keywords"
+    content="About Royal Villa, luxury villa company, private stays Mumbai, Lonavala luxury villa host, Karjat private estates">
+
+  <!-- OpenGraph Meta -->
+  <meta property="og:title" content="About Us | ROYAL VILLA">
+  <meta property="og:description"
+    content="Discover our story, luxury standards, and commitment to creating unforgettable private holiday escapes near Mumbai.">
+  <meta property="og:image" content="assets/images/about-interior.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= TOP LUXURY HEADER ================= -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+
+      <!-- Brand Logo with Gold Emblem -->
+      <a href="index.html" class="brand-logo" id="brand-logo">
+        <div class="logo-emblem">
+          <svg viewBox="0 0 100 100" class="emblem-svg">
+            <circle cx="50" cy="50" r="45" stroke="#9E8B67" stroke-width="1.8" fill="none" opacity="0.6" />
+            <circle cx="50" cy="50" r="38" stroke="#7A6A4F" stroke-width="1.2" fill="none" />
+            <path d="M50 14 L50 86 M14 50 L86 50 M24 24 L76 76 M24 76 L76 24" stroke="#9E8B67" stroke-width="0.8"
+              opacity="0.4" />
+            <path d="M50 22 C34 22 22 34 22 50 C22 66 34 78 50 78 C66 78 78 66 78 50 C78 34 66 22 50 22 Z"
+              stroke="#7A6A4F" stroke-width="1.4" fill="none" />
+            <path d="M50 28 Q62 50 50 72 Q38 50 50 28 Z" stroke="#9E8B67" stroke-width="1.2"
+              fill="rgba(158,139,103,0.1)" />
+            <circle cx="50" cy="50" r="6" fill="#7A6A4F" />
+          </svg>
+        </div>
+        <div class="logo-text-wrap">
+          <span class="logo-title">ROYAL VILLA</span>
+          <span class="logo-tagline">REDISCOVER YOUR FAMILY HOLIDAYS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="villas.html" class="nav-link">Villas</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+
+          <!-- Location with Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="villas.html" class="nav-link dropdown-toggle" id="location-dropdown-btn">
+              Locations <i data-lucide="chevron-down" class="nav-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="villas.html?location=Lonavala">Villas in Lonavala</a></li>
+              <li><a href="villas.html?location=Karjat">Villas in Karjat</a></li>
+              <li><a href="villas.html?location=Pali">Villas in Pali / Alibaug</a></li>
+              <li><a href="villas.html?location=Igatpuri">Villas in Igatpuri</a></li>
+              <li class="dropdown-divider"></li>
+              <li><a href="villas.html?location=ALL">View All Locations</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="testimonials.html" class="nav-link">Reviews</a></li>
+          <li class="nav-item"><a href="blogs.html" class="nav-link">Guides</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" onclick="openPropertyModal()" class="nav-link">List Property</a></li>
+        </ul>
+      </nav>
+
+      <!-- Top Right Phone Pill Button -->
+      <div class="nav-actions">
+        <a href="tel:+918010947110" class="btn-phone-header" id="header-phone-btn" title="Call Royal Villa">
+          <i data-lucide="phone" class="phone-icon"></i>
+          <span>+91 8010947110</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="logo-text-wrap">
+        <span class="logo-title">ROYAL VILLA</span>
+        <span class="logo-tagline">LUXURY HOLIDAYS</span>
+      </div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="villas.html" class="drawer-link">Explore Villas</a></li>
+      <li><a href="about.html" class="drawer-link">About Us</a></li>
+      <li><a href="services.html" class="drawer-link">VIP Services & Amenities</a></li>
+      <li><a href="villas.html?location=Lonavala" class="drawer-link">Villas in Lonavala</a></li>
+      <li><a href="villas.html?location=Karjat" class="drawer-link">Villas in Karjat</a></li>
+      <li><a href="villas.html?location=Pali" class="drawer-link">Villas in Pali / Alibaug</a></li>
+      <li><a href="villas.html?location=Igatpuri" class="drawer-link">Villas in Igatpuri</a></li>
+      <li><a href="testimonials.html" class="drawer-link">Guest Reviews</a></li>
+      <li><a href="blogs.html" class="drawer-link">Travel Guides</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact Us & FAQ</a></li>
+      <li><a href="javascript:void(0)" onclick="closeDrawer(); openPropertyModal();" class="drawer-link">List your Property</a></li>
+      <li><a href="tel:+918010947110" class="btn-phone-header drawer-cta"><i data-lucide="phone"></i> +91 8010947110</a></li>
+      <li><button class="btn-book-gold" onclick="closeDrawer(); openBookingModal();"><i data-lucide="calendar"></i> Book a Villa</button></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ================= SUBPAGE HERO BANNER ================= -->
+    <section class="subpage-hero">
+      <div class="subpage-hero-inner">
+        <div class="breadcrumb-nav">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span class="current">About Us</span>
+        </div>
+        <h1 class="subpage-title">Rediscover Your Family Holidays</h1>
+        <p class="subpage-subtitle">
+          Royal Villa was founded with a singular vision: to craft private holiday homes where warmth, luxury, and quality time come naturally.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT CONTENT SECTION ================= -->
+    <section class="subpage-section">
+      <div class="container">
+
+        <!-- Intro Grid: Story & Image -->
+        <div class="about-intro-grid">
+          <div class="about-intro-text">
+            <span class="section-tag-gold uppercase-track">OUR STORY & PHILOSOPHY</span>
+            <h2 class="section-serif-title" style="margin-top: 10px; margin-bottom: 20px;">
+              Why We Believe in Private Villas Over Crowded Hotels
+            </h2>
+            <p>
+              In an era of bustling cities and crowded resorts, real luxury isn't just about marble floors — it is about <strong>uninterrupted time with the people who matter most</strong>. We realized that shared hotel pools, restrictive breakfast timings, and noise from neighboring rooms frequently get in the way of true rest.
+            </p>
+            <p>
+              <strong>Royal Villa</strong> curates exclusive, stand-alone private holiday estates across Lonavala, Karjat, Pali, and Igatpuri. When you check in, the entire grounds belong exclusively to your group: your own shimmering swimming pool, sprawling manicured lawns, game lounges, and personal chef preparing hot regional meals just the way your family likes them.
+            </p>
+            <p>
+              Whether it’s a 50th birthday celebration, a 3-generation family reunion, an anniversary dinner under a starry gazebo, or a weekend team offsite, we treat every stay as an opportunity to deliver flawless hospitality.
+            </p>
+            <div style="margin-top: 28px; display: flex; gap: 16px; flex-wrap: wrap;">
+              <a href="villas.html" class="btn-dark-pill">Explore Our Villas</a>
+              <a href="contact.html" class="btn-phone-header" style="display: inline-flex;"><i data-lucide="phone"></i> Speak With Concierge</a>
+            </div>
+          </div>
+
+          <div class="about-image-wrap">
+            <img src="assets/images/about-interior.jpg" alt="Royal Villa Luxury Architecture">
+            <div class="about-badge-floating">
+              <span class="about-badge-num">100%</span>
+              <span class="about-badge-label">Private Estates<br>Zero Stranger Sharing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Counter Bar -->
+        <div class="stats-counter-bar">
+          <div class="stat-item">
+            <span class="stat-num">50+</span>
+            <span class="stat-label">Curated Private Villas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">10,000+</span>
+            <span class="stat-label">Happy Guests Hosted</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">4.9 ★</span>
+            <span class="stat-label">Average Guest Rating</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">24 / 7</span>
+            <span class="stat-label">Dedicated On-Site Caretakers</span>
+          </div>
+        </div>
+
+        <!-- 4 Pillars of Hospitality -->
+        <div class="section-title-wrap text-center" style="margin-top: 60px;">
+          <span class="section-tag-gold uppercase-track">THE ROYAL VILLA STANDARD</span>
+          <h2 class="section-serif-title">Built on Four Uncompromising Pillars</h2>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon"><i data-lucide="shield-check"></i></div>
+            <h3>100% Exclusivity</h3>
+            <p>You never share pools, dining tables, or lawns with strangers. The entire estate is exclusively reserved for you and your guests.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i data-lucide="chef-hat"></i></div>
+            <h3>Chef-Crafted Feasts</h3>
+            <p>Indulge in wholesome home-cooked cuisine prepared fresh by in-house cooks according to your family's preferences and dietary habits.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i data-lucide="sparkles"></i></div>
+            <h3>Hospitality Grade Hygiene</h3>
+            <p>Every home undergoes a rigorous 40-point hygiene inspection, pool chlorination cycle, and fresh premium linen setup before arrival.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon"><i data-lucide="heart-handshake"></i></div>
+            <h3>Round-The-Clock Care</h3>
+            <p>Warm, attentive on-site caretakers handle luggage, pool maintenance, bonfire setups, and local grocery runs with a smile.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CTA RIBBON ================= -->
+    <section class="cta-ribbon-section">
+      <div class="cta-ribbon-bar">
+        <div class="cta-ribbon-container">
+          <h2 class="cta-ribbon-title">Plan Your Next Family Escape With Us</h2>
+          <button class="btn-book-cta" onclick="openBookingModal()">Inquire on WhatsApp</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= LUXURY FOOTER ================= -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-wave-decor"></div>
+    <div class="container relative-z">
+
+      <div class="footer-grid">
+
+        <div class="footer-col brand-col">
+          <div class="footer-logo-wrap">
+            <div class="logo-emblem footer-emblem">
+              <svg viewBox="0 0 100 100" class="emblem-svg">
+                <circle cx="50" cy="50" r="45" stroke="#9E8B67" stroke-width="1.8" fill="none" />
+                <path d="M50 14 L50 86 M14 50 L86 50 M24 24 L76 76 M24 76 L76 24" stroke="#9E8B67" stroke-width="0.8"
+                  opacity="0.4" />
+                <path d="M50 22 C34 22 22 34 22 50 C22 66 34 78 50 78 C66 78 78 66 78 50 C78 34 66 22 50 22 Z"
+                  stroke="#7A6A4F" stroke-width="1.4" fill="none" />
+                <circle cx="50" cy="50" r="6" fill="#7A6A4F" />
+              </svg>
+            </div>
+            <span class="footer-brand-title">ROYAL VILLA</span>
+            <span class="footer-brand-tag">REDISCOVER YOUR FAMILY HOLIDAYS</span>
+          </div>
+          <p class="footer-desc">
+            We specialize in creating warm, memorable getaways through a handpicked collection of private villas near
+            Mumbai. Plan your next routine escape with Royal Villa.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="villas.html">All Villas</a></li>
+            <li><a href="services.html">VIP Services</a></li>
+            <li><a href="testimonials.html">Guest Reviews</a></li>
+            <li><a href="blogs.html">Travel Guides</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="javascript:void(0)" onclick="openPropertyModal()">List Your Property</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Villas</h4>
+          <ul class="footer-links">
+            <li><a href="villas.html?location=Lonavala">Villas in Lonavala</a></li>
+            <li><a href="villas.html?location=Karjat">Villas in Karjat</a></li>
+            <li><a href="villas.html?location=Igatpuri">Villas in Igatpuri</a></li>
+            <li><a href="villas.html?location=Pali">Villas in Pali / Alibaug</a></li>
+            <li><a href="villas.html">View All Villas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4 class="footer-heading">Contact</h4>
+          <div class="contact-info-item">
+            <div class="contact-icon-bubble"><i data-lucide="map-pin"></i></div>
+            <div class="contact-details"><span class="c-label">Location</span><span class="c-value">Mumbai, Maharashtra</span></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-bubble"><i data-lucide="mail"></i></div>
+            <div class="contact-details"><span class="c-label">Email Us</span><a href="mailto:abhijitmungase608@gmail.com" class="c-value">abhijitmungase608@gmail.com</a></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-bubble"><i data-lucide="phone"></i></div>
+            <div class="contact-details"><span class="c-label">Call Us</span><a href="tel:+918010947110" class="c-value">8010947110</a></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">©2026 <strong>Royal Villa</strong>. All rights reserved. | Web Developed by <strong>Abhijit Mungase</strong></p>
+        <div class="footer-social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING ACTION BUTTONS ================= -->
+  <a href="tel:+918010947110" class="floating-call-btn" id="floating-call" title="Call Us Directly" aria-label="Direct Phone Call">
+    <i data-lucide="phone"></i>
+  </a>
+
+  <a href="https://api.whatsapp.com/send?phone=918010947110&text=Hello%20Royal%20Villa%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20luxury%20private%20villa%20near%20Mumbai."
+    target="_blank" rel="noopener" class="floating-whatsapp-btn" id="floating-whatsapp" title="Chat on WhatsApp" aria-label="WhatsApp Chat">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="#FFFFFF">
+      <path d="M12.031 0C5.394 0 .012 5.382.012 12.019c0 2.119.553 4.185 1.605 6.007L0 24l6.166-1.618a11.968 11.968 0 0 0 5.865 1.517h.005c6.634 0 12.019-5.383 12.019-12.02 0-3.21-1.25-6.226-3.52-8.497C18.257 1.25 15.24 0 12.031 0zm0 22.024a10.02 10.02 0 0 1-5.111-1.397l-.367-.218-3.799.996 1.014-3.704-.239-.38a10.015 10.015 0 0 1-1.536-5.302C2.003 6.48 6.5 1.983 12.033 1.983c2.679 0 5.197 1.044 7.091 2.938a9.96 9.96 0 0 1 2.934 7.098c0 5.536-4.498 10.005-10.027 10.005zm5.49-7.518c-.301-.151-1.782-.88-2.059-.98-.276-.1-.477-.151-.678.151-.2.301-.779.98-.955 1.18-.176.201-.351.226-.653.076-.301-.151-1.272-.469-2.423-1.496-.895-.798-1.5-1.784-1.676-2.086-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.151-.176.201-.301.301-.502.1-.201.05-.377-.025-.527-.075-.151-.678-1.633-.929-2.236-.245-.588-.494-.508-.678-.517-.176-.009-.377-.01-.578-.01-.201 0-.527.075-.803.376s-1.054 1.03-1.054 2.511c0 1.482 1.08 2.912 1.23 3.113.151.201 2.124 3.243 5.145 4.549.719.311 1.28.497 1.718.636.722.23 1.378.197 1.898.12.579-.087 1.782-.728 2.033-1.431.251-.703.251-1.306.176-1.431-.076-.126-.277-.201-.578-.352z" />
+    </svg>
+    <span class="whatsapp-pulse"></span>
+  </a>
+
+  <!-- ================= MODALS ================= -->
+  <!-- 1. Quick Booking Modal -->
+  <div class="modal-backdrop" id="booking-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <span class="modal-tag">DIRECT RESERVATION</span>
+          <h3 class="modal-title">Book Your Royal Villa</h3>
+        </div>
+        <button class="modal-close" onclick="closeBookingModal()"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="book-location">Destination</label>
+              <select id="book-location" onchange="onLocationChange(this.value)" required>
+                <option value="Lonavala">Lonavala</option>
+                <option value="Karjat">Karjat</option>
+                <option value="Pali">Pali / Alibaug</option>
+                <option value="Igatpuri">Igatpuri</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="book-villa">Select Villa</label>
+              <select id="book-villa" onchange="updateBookingEstimate()" required>
+                <option value="Gulmohar" data-price="24999">Gulmohar (3BHK - Lonavala)</option>
+                <option value="Evergreen Escape" data-price="29999">Evergreen Escape (4BHK - Karjat)</option>
+                <option value="Maison Bellevue" data-price="38500">Maison Bellevue (5BHK - Pali)</option>
+                <option value="Casa Tropico" data-price="45000">Casa Tropico (6BHK - Igatpuri)</option>
+                <option value="Nirvana Farm" data-price="27000">Nirvana Farm (4BHK - Karjat)</option>
+                <option value="Suite Villa" data-price="34000">Suite Villa (5BHK - Lonavala)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="book-checkin">Check-in Date</label>
+              <input type="date" id="book-checkin" required onchange="updateBookingEstimate()">
+            </div>
+            <div class="form-group">
+              <label for="book-checkout">Check-out Date</label>
+              <input type="date" id="book-checkout" required onchange="updateBookingEstimate()">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="book-guests">Number of Guests</label>
+              <select id="book-guests" required>
+                <option value="2-6 Guests">2 - 6 Guests</option>
+                <option value="7-12 Guests" selected>7 - 12 Guests</option>
+                <option value="13-18 Guests">13 - 18 Guests</option>
+                <option value="19-25+ Guests">19 - 25+ Guests</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="book-phone">Your Mobile (WhatsApp)</label>
+              <input type="tel" id="book-phone" placeholder="e.g. +91 8010947110" required>
+            </div>
+          </div>
+
+          <div class="booking-estimate-card" id="estimate-box">
+            <div class="estimate-row"><span>Estimated Duration:</span><strong id="est-nights">1 Night</strong></div>
+            <div class="estimate-row"><span>Villa Rate:</span><strong id="est-rate">₹24,999 / night</strong></div>
+            <div class="estimate-divider"></div>
+            <div class="estimate-row total"><span>Estimated Total:</span><span class="est-total-price" id="est-total">₹24,999</span></div>
+          </div>
+
+          <div class="modal-footer-actions">
+            <button type="submit" class="btn-whatsapp-submit"><i data-lucide="message-circle"></i> Confirm & Inquire on WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. List Your Property Modal -->
+  <div class="modal-backdrop" id="property-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <span class="modal-tag">PARTNER WITH US</span>
+          <h3 class="modal-title">List Your Villa with Royal Villa</h3>
+        </div>
+        <button class="modal-close" onclick="closePropertyModal()"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-lead">Monetize your luxury second home with guaranteed high yields, full property maintenance, and vetted elite guests.</p>
+        <form onsubmit="handlePropertySubmit(event)">
+          <div class="form-row">
+            <div class="form-group"><label>Owner Full Name</label><input type="text" placeholder="e.g. Rajesh Singhania" required></div>
+            <div class="form-group"><label>Contact Phone</label><input type="tel" placeholder="+91 80109 XXXXX" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Villa Location</label><input type="text" placeholder="e.g. Tungarli, Lonavala" required></div>
+            <div class="form-group"><label>Bedrooms Count</label>
+              <select required>
+                <option>2 BHK</option>
+                <option>3 BHK</option>
+                <option selected>4 BHK</option>
+                <option>5+ BHK Luxury Estate</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Property Description / Amenities (Pool, Lawn, Views)</label>
+            <textarea rows="3" placeholder="Tell us about your property..."></textarea>
+          </div>
+          <button type="submit" class="btn-book-gold full-w">Submit Property for Review</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toast">
+    <i data-lucide="check-circle" class="toast-icon"></i>
+    <span id="toast-msg">Action completed!</span>
+  </div>
+
+  <!-- JavaScript Application Logic -->
+  <script src="app.js"></script>
+</body>
+
+</html>

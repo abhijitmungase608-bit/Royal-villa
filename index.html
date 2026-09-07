@@ -38,7 +38,7 @@
     <div class="nav-container">
 
       <!-- Brand Logo with Gold Emblem -->
-      <a href="#hero" class="brand-logo" id="brand-logo">
+      <a href="index.html" class="brand-logo" id="brand-logo">
         <div class="logo-emblem">
           <svg viewBox="0 0 100 100" class="emblem-svg">
             <circle cx="50" cy="50" r="45" stroke="#9E8B67" stroke-width="1.8" fill="none" opacity="0.6" />
@@ -61,27 +61,30 @@
       <!-- Desktop Navigation Menu -->
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
-          <li class="nav-item"><a href="#destinations" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="villas.html" class="nav-link">Villas</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
 
           <!-- Location with Dropdown -->
           <li class="nav-item dropdown">
-            <a href="#destinations" class="nav-link dropdown-toggle" id="location-dropdown-btn">
-              Location <i data-lucide="chevron-down" class="nav-arrow"></i>
+            <a href="villas.html" class="nav-link dropdown-toggle" id="location-dropdown-btn">
+              Locations <i data-lucide="chevron-down" class="nav-arrow"></i>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="#villas" onclick="filterVillas('Lonavala')">Villas in Lonavala</a></li>
-              <li><a href="#villas" onclick="filterVillas('Karjat')">Villas in Karjat</a></li>
-              <li><a href="#villas" onclick="filterVillas('Pali')">Villas in Pali / Alibaug</a></li>
-              <li><a href="#villas" onclick="filterVillas('Igatpuri')">Villas in Igatpuri</a></li>
+              <li><a href="villas.html?location=Lonavala">Villas in Lonavala</a></li>
+              <li><a href="villas.html?location=Karjat">Villas in Karjat</a></li>
+              <li><a href="villas.html?location=Pali">Villas in Pali / Alibaug</a></li>
+              <li><a href="villas.html?location=Igatpuri">Villas in Igatpuri</a></li>
               <li class="dropdown-divider"></li>
-              <li><a href="#villas" onclick="filterVillas('ALL')">View All Locations</a></li>
+              <li><a href="villas.html?location=ALL">View All Locations</a></li>
             </ul>
           </li>
 
-          <li class="nav-item"><a href="#footer" class="nav-link">Contact Us</a></li>
-          <li class="nav-item"><a href="javascript:void(0)" onclick="openPropertyModal()" class="nav-link">List your
-              Property</a></li>
+          <li class="nav-item"><a href="testimonials.html" class="nav-link">Reviews</a></li>
+          <li class="nav-item"><a href="blogs.html" class="nav-link">Guides</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="javascript:void(0)" onclick="openPropertyModal()" class="nav-link">List Property</a></li>
         </ul>
       </nav>
 
@@ -113,19 +116,20 @@
       </button>
     </div>
     <ul class="drawer-nav-list">
-      <li><a href="#hero" class="drawer-link" onclick="closeDrawer()">Home</a></li>
-      <li><a href="#destinations" class="drawer-link" onclick="closeDrawer()">About Us</a></li>
-      <li><a href="#destinations" class="drawer-link" onclick="closeDrawer()">Locations</a></li>
-      <li><a href="#villas" class="drawer-link" onclick="closeDrawer()">Explore Villas</a></li>
-      <li><a href="#testimonials" class="drawer-link" onclick="closeDrawer()">Testimonials</a></li>
-      <li><a href="#guides" class="drawer-link" onclick="closeDrawer()">Travel Guides</a></li>
-      <li><a href="#faq" class="drawer-link" onclick="closeDrawer()">FAQ</a></li>
-      <li><a href="javascript:void(0)" onclick="closeDrawer(); openPropertyModal();" class="drawer-link">List your
-          Property</a></li>
-      <li><a href="tel:+918010947110" class="btn-phone-header drawer-cta"><i data-lucide="phone"></i> +91 8010947110
-        </a></li>
-      <li><button class="btn-book-gold" onclick="closeDrawer(); openBookingModal();"><i data-lucide="calendar"></i> Book
-          a Villa</button></li>
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="villas.html" class="drawer-link">Explore Villas</a></li>
+      <li><a href="about.html" class="drawer-link">About Us</a></li>
+      <li><a href="services.html" class="drawer-link">VIP Services & Amenities</a></li>
+      <li><a href="villas.html?location=Lonavala" class="drawer-link">Villas in Lonavala</a></li>
+      <li><a href="villas.html?location=Karjat" class="drawer-link">Villas in Karjat</a></li>
+      <li><a href="villas.html?location=Pali" class="drawer-link">Villas in Pali / Alibaug</a></li>
+      <li><a href="villas.html?location=Igatpuri" class="drawer-link">Villas in Igatpuri</a></li>
+      <li><a href="testimonials.html" class="drawer-link">Guest Reviews</a></li>
+      <li><a href="blogs.html" class="drawer-link">Travel Guides</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact Us & FAQ</a></li>
+      <li><a href="javascript:void(0)" onclick="closeDrawer(); openPropertyModal();" class="drawer-link">List your Property</a></li>
+      <li><a href="tel:+918010947110" class="btn-phone-header drawer-cta"><i data-lucide="phone"></i> +91 8010947110</a></li>
+      <li><button class="btn-book-gold" onclick="closeDrawer(); openBookingModal();"><i data-lucide="calendar"></i> Book a Villa</button></li>
     </ul>
   </div>
 
@@ -199,7 +203,7 @@
         <div class="destination-cards-grid">
 
           <!-- Lonavala Card -->
-          <div class="destination-card" onclick="filterVillas('Lonavala')" id="dest-lonavala">
+          <a href="villas.html?location=Lonavala" class="destination-card" id="dest-lonavala">
             <div class="destination-art-icon">
               <!-- Custom Waterfall & Mountain Illustration -->
               <svg viewBox="0 0 120 90" class="dest-svg">
@@ -229,10 +233,10 @@
               <h3 class="destination-name">Lonavala</h3>
               <span class="destination-count">14+ Villas Available</span>
             </div>
-          </div>
+          </a>
 
           <!-- Karjat Card -->
-          <div class="destination-card" onclick="filterVillas('Karjat')" id="dest-karjat">
+          <a href="villas.html?location=Karjat" class="destination-card" id="dest-karjat">
             <div class="destination-art-icon">
               <!-- Custom Green Hills Illustration -->
               <svg viewBox="0 0 120 90" class="dest-svg">
@@ -255,10 +259,10 @@
               <h3 class="destination-name">Karjat</h3>
               <span class="destination-count">9+ Luxury Estates</span>
             </div>
-          </div>
+          </a>
 
           <!-- Pali Card -->
-          <div class="destination-card" onclick="filterVillas('Pali')" id="dest-pali">
+          <a href="villas.html?location=Pali" class="destination-card" id="dest-pali">
             <div class="destination-art-icon">
               <!-- Custom Tropical Palm Tree & Deckchair Illustration -->
               <svg viewBox="0 0 120 90" class="dest-svg">
@@ -283,10 +287,10 @@
               <h3 class="destination-name">Pali</h3>
               <span class="destination-count">6+ Private Retreats</span>
             </div>
-          </div>
+          </a>
 
           <!-- Igatpuri Card -->
-          <div class="destination-card" onclick="filterVillas('Igatpuri')" id="dest-igatpuri">
+          <a href="villas.html?location=Igatpuri" class="destination-card" id="dest-igatpuri">
             <div class="destination-art-icon">
               <!-- Custom Serene Lake & Water Lilies Illustration -->
               <svg viewBox="0 0 120 90" class="dest-svg">
@@ -317,7 +321,7 @@
               <h3 class="destination-name">Igatpuri</h3>
               <span class="destination-count">11+ Scenic Stays</span>
             </div>
-          </div>
+          </a>
 
         </div>
 
@@ -1060,14 +1064,14 @@
         <div class="footer-col">
           <h4 class="footer-heading">Explore</h4>
           <ul class="footer-links">
-            <li><a href="#destinations">About Us</a></li>
-            <li><a href="#footer">Contact Us</a></li>
-            <li><a href="#guides">Blogs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="villas.html">All Villas</a></li>
+            <li><a href="services.html">VIP Services</a></li>
+            <li><a href="testimonials.html">Guest Reviews</a></li>
+            <li><a href="blogs.html">Travel Guides</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
             <li><a href="javascript:void(0)" onclick="openPropertyModal()">List Your Property</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="javascript:void(0)"
-                onclick="showToast('Privacy Policy: All guest data is encrypted and strictly confidential.')">Privacy
-                Policy</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
           </ul>
         </div>
 
@@ -1075,10 +1079,11 @@
         <div class="footer-col">
           <h4 class="footer-heading">Villas</h4>
           <ul class="footer-links">
-            <li><a href="#villas" onclick="filterVillas('Lonavala')">Villas in Lonavala</a></li>
-            <li><a href="#villas" onclick="filterVillas('Karjat')">Villas in Pune</a></li>
-            <li><a href="#villas" onclick="filterVillas('Igatpuri')">Villas in Igatpuri</a></li>
-            <li><a href="#villas" onclick="filterVillas('Pali')">Villas in Pali / Alibaug</a></li>
+            <li><a href="villas.html?location=Lonavala">Villas in Lonavala</a></li>
+            <li><a href="villas.html?location=Karjat">Villas in Karjat</a></li>
+            <li><a href="villas.html?location=Igatpuri">Villas in Igatpuri</a></li>
+            <li><a href="villas.html?location=Pali">Villas in Pali / Alibaug</a></li>
+            <li><a href="villas.html">View All Villas</a></li>
           </ul>
         </div>
 

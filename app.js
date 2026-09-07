@@ -210,11 +210,21 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initHeroSlider();
   initBookingDefaults();
+
+  // Check URL query parameters (e.g. villas.html?location=Lonavala)
+  const urlParams = new URLSearchParams(window.location.search);
+  const locParam = urlParams.get('location');
+  if (locParam && document.querySelectorAll('.luxury-villa-card').length) {
+    setTimeout(() => {
+      filterVillas(locParam);
+    }, 150);
+  }
 });
 
 // --- Header Scroll Listener ---
 function initHeaderScroll() {
   const header = document.getElementById('header');
+  if (!header) return;
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
       header.classList.add('scrolled');
@@ -231,7 +241,7 @@ const drawerClose = document.getElementById('drawer-close');
 
 if (menuToggle) {
   menuToggle.addEventListener('click', () => {
-    mobileDrawer.classList.add('open');
+    if (mobileDrawer) mobileDrawer.classList.add('open');
   });
 }
 
@@ -284,6 +294,12 @@ function filterVillas(location, btnElement) {
   const cards = document.querySelectorAll('.luxury-villa-card');
   const filterPills = document.querySelectorAll('.filter-pill');
 
+  // If on another page, redirect to villas.html with query parameter
+  if (!cards.length) {
+    window.location.href = `villas.html?location=${encodeURIComponent(location)}`;
+    return;
+  }
+
   // Update button active states
   if (btnElement) {
     filterPills.forEach(pill => pill.classList.remove('active'));
@@ -303,7 +319,7 @@ function filterVillas(location, btnElement) {
   // Filter Villa Cards
   let visibleCount = 0;
   cards.forEach(card => {
-    const cardLoc = card.getAttribute('data-location');
+    const cardLoc = card.getAttribute('data-location') || '';
     if (location === 'ALL' || cardLoc.toLowerCase().includes(location.toLowerCase())) {
       card.style.display = 'flex';
       visibleCount++;
@@ -312,9 +328,9 @@ function filterVillas(location, btnElement) {
     }
   });
 
-  // Smooth scroll to villas section if triggered from header / destination cards
+  // Smooth scroll to villas container if triggered from header / destination cards
   if (!btnElement || !btnElement.classList.contains('filter-pill')) {
-    const villasSec = document.getElementById('villas');
+    const villasSec = document.getElementById('villas') || document.getElementById('villas-container');
     if (villasSec) {
       villasSec.scrollIntoView({ behavior: 'smooth' });
     }
@@ -607,6 +623,31 @@ function showToast(msg) {
   toastTimeout = setTimeout(() => {
     toast.classList.remove('show');
   }, 3500);
+}
+
+// --- Contact Form Submission ---
+function handleContactSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('c-name')?.value || 'Guest';
+  const phone = document.getElementById('c-phone')?.value || '';
+  const villa = document.getElementById('c-villa')?.value || 'General Inquiry';
+  const date = document.getElementById('c-date')?.value || 'Not specified';
+  const guests = document.getElementById('c-guests')?.value || 'Flexible';
+  const msg = document.getElementById('c-msg')?.value || 'No special requests';
+
+  const waText = `*Royal Villa Inquiry - Contact Form*\n\n` +
+    `👤 *Name:* ${name}\n` +
+    `📞 *Phone:* ${phone}\n` +
+    `🏰 *Destination/Villa:* ${villa}\n` +
+    `📅 *Preferred Dates:* ${date}\n` +
+    `👥 *Guests:* ${guests}\n` +
+    `💬 *Message:* ${msg}\n\n` +
+    `_Hello Royal Villa Team, please get in touch with me regarding my inquiry!_`;
+
+  showToast('🎉 Thank you! Redirecting to WhatsApp with your inquiry...');
+  setTimeout(() => {
+    window.open(`https://api.whatsapp.com/send?phone=918010947110&text=${encodeURIComponent(waText)}`, '_blank');
+  }, 700);
 }
 
 // Close modals when clicking backdrop
